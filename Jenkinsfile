@@ -6,6 +6,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    // Change to your build workspace
+                    dir('test') {
                         // Source the build environment using Bash
                         sh 'bash -c "source oe-init-build-env"'
                         
