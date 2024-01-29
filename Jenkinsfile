@@ -6,8 +6,7 @@ pipeline {
         stage('build') {
           steps {
             sh 'source oe-init-build-env'
-            sh '''bitbake core-image-sato
-'''
+            sh '''bitbake core-image-sato'''
           }
         }
 
@@ -23,6 +22,5 @@ pipeline {
 
       }
     }
-
   }
 }
