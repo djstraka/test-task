@@ -10,10 +10,10 @@ pipeline {
                     // Change to your build workspace
 
                         // Source the build environment using Bash
-                        sh 'bash -c "source oe-init-build-env"'
+                        sh 'bash -c "source oe-init-build-env && bitbake core-image-sato"'
                         
                         // Build the project using bitbake
-                        sh 'bash -c "bitbake core-image-sato"'
+                        //sh 'bash -c "bitbake core-image-sato"'
                     
                 }
             }
