@@ -6,14 +6,12 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Change to your build workspace
-                    dir('<your_workspace>') {
                         // Source the build environment using Bash
                         sh 'bash -c "source oe-init-build-env"'
                         
                         // Build the project using bitbake
                         sh 'bash -c "bitbake core-image-sato"'
-                    }
+                    
                 }
             }
         }
