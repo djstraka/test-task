@@ -8,13 +8,13 @@ pipeline {
             steps {
                 script {
                     // Change to your build workspace
-                    dir('test') {
+
                         // Source the build environment using Bash
                         sh 'bash -c "source oe-init-build-env"'
                         
                         // Build the project using bitbake
                         sh 'bash -c "bitbake core-image-sato"'
-                    }
+                    
                 }
             }
         }
