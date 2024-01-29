@@ -4,7 +4,7 @@ pipeline {
 
 
     stages {
-        stage('Build') {
+        /* stage('Build') {
             steps {
                 script {
                     // Change to your build workspace
@@ -12,12 +12,13 @@ pipeline {
                         // Source the build environment using Bash
                         sh 'bash -c "source oe-init-build-env && bitbake core-image-sato"'
                         
-                        // Build the project using bitbake
-                        //sh 'bash -c "bitbake core-image-sato"'
+                        // Archive the built image
+                        archiveArtifacts artifacts: '/var/lib/jenkins/workspace/test/core-image-sato-*.tar.gz', fingerprint: true
+                    
                     
                 }
             }
-        }
+        } */
 
         stage('Sonar') {
             steps {
