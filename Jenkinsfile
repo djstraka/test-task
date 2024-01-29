@@ -2,6 +2,7 @@ pipeline {
     agent any
     
 
+
     stages {
         stage('Build') {
             steps {
@@ -13,7 +14,7 @@ pipeline {
                         
                         // Build the project using bitbake
                         sh 'bash -c "bitbake core-image-sato"'
-                    
+                    }
                 }
             }
         }
