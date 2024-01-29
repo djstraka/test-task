@@ -9,11 +9,10 @@
             steps {
                 script {
                         // Source the build environment
-                        sh 'source oe-init-build-env'
+                        sh 'bash -c "source oe-init-build-env"'
                         
                         // Build the project using bitbake
-                        sh 'bitbake core-image-sato'
-                }
+                        sh 'bash -c "bitbake core-image-sato"'
             }
         }
 
